@@ -1,5 +1,6 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import { CartProvider } from "@/contexts/cart-context";
 import { AuthProvider } from "@/contexts/auth-context";
 import { Navbar } from "@/components/navbar";
@@ -58,6 +59,7 @@ export default function RootLayout({
             <Toaster />
           </CartProvider>
         </AuthProvider>
+        <Analytics />
       </body>
     </html>
   );
